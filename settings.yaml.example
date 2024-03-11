@@ -1,0 +1,25 @@
+app:
+    host: 0.0.0.0
+    port: 10099
+    debug: true
+    env: dev
+    name: vpsproxy
+    timezone: Asia/Shanghai
+log:
+    compress: true
+    encoder: console
+    filename: logs/vpsproxy.log
+    level: debug
+    max_age: 30
+    max_backup: 5
+    max_size: 64
+proxy:
+    https:
+        cert: ""
+        key: ""
+        port: 12000
+        target: http://127.0.0.1:12315
+    grpc:
+        port: 12010
+        secret: qwert
+        target: 127.0.0.1:10010
