@@ -47,8 +47,6 @@ func loadConfig(appointedConfigPath string) {
 	if err := viperInst.ReadInConfig(); err != nil {
 		panic(err)
 	}
-
-	viperInst.WatchConfig()
 }
 
 func Get(path string, defaultValues ...interface{}) string {
